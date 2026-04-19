@@ -1,8 +1,13 @@
-\begin{thebibliography}{}
-@book{atkins2010physical,
-  title={Physical Chemistry},
-  author={Atkins, Peter and de Paula, Julio},
-  year={2010},
-  publisher={Oxford University Press}
-}
+\begin{thebibliography}{1}
+
+\bibitem{atkins2010physical}
+Peter Atkins and Julio de~Paula.
+\newblock {\em Physical Chemistry}.
+\newblock Oxford University Press, 2010.
+
+\bibitem{mycode}
+Abdel {Bari Saoute}.
+\newblock Dynamic light scattering analysis code.
+\newblock \url{https://github.com/abdelbarisaoute/report}, 2024.
+
 \end{thebibliography}

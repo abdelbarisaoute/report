@@ -1,0 +1,36 @@
+\section{Results and Discussion}
+The primary objective of this study was to characterize the behavior of suspended nanoparticles in a highly viscous 90\% glycerol-water mixture using dynamic light scattering (DLS) techniques. This section is dedicated to the experimental findings in two distinct regimes. First, we analyse the speckle patterns obtained under steady-state conditions, where the sample was allowed to equilibrate at various temperatures, to extract the particles radiius size and to identify the presence of micro-convection. Second, we examine the system's response to dynamic heating, utilizing the Rayleigh number to validate the onset of macroscopic convection and identifying the hardware limitations of the optical setup under extreme flow velocities.
+\subsection{Particle Sizing and "Stationary" Micro-Convection}
+To establish a baseline for the dynamic heating experiments, the optical setup was first used to analyze the 90\% glycerol-water mixture under nominally "stationary" conditions at room temperature ($25^\circ C$ to $29^\circ C$). The intensity autocorrelation function, $g_2(\tau)-1$, was computed and its log was fitted to a linear model to extract the characteristic decorrelation time ($\tau_c$)\textit{-fig.\ref{manip3}-}. Using the dispersion relation \eqref{disp_eq} and the Stoke-Einstein equation \eqref{stokes_einstein}, the Stokes radius of the suspended nanoparticles was estimated to be approximately $90.8 \, nm$ -Table \ref{Table1}-. This measurement is consistent with the expected size range for the nanoparticles used in the experiment, successfully validating the optical setup and the spatial-averaging correlation algorithm.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{C:/Users/abdel/Desktop/etudes/PT_Speckle/manip3/figures/Figure_1.png}
+\caption{The intensity autocorrelation function for the 90\% glycerol-water mixture at room temperature and the linear fit to its logarithm.}
+\label{manip3}
+\end{figure}
+
+
+\begin{table}[h]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.6}
+\caption{Results extracted from the speckle correlation function ($\Theta = \pi/2$, $\theta_i=25^\circ$) }
+\label{tab:dls_results}
+\begin{tabular}{cccccccc}
+\toprule
+$\tau_c$ (mean) & $\tau_c$ (std) & $q$ & $D$ & $a$ & $n$ & $\eta$ & $T$ \\
+\midrule
+$0.0674$ s & $0.0012$ s & $2.44 \times 10^{7}$ m$^{-1}$ & $1.24 \times 10^{-14}$ m$^2$/s & $9.08 \times 10^{-8}$ m & $1.461$ & $0.194$ Pa$\cdot$s & $26^\circ C$ \\
+\bottomrule
+\label{Table1}
+\end{tabular}
+\end{table}
+
+The uncertainnty on $\tau_c$ was estimated by computing the standard deviaton of $\tau_c$ across ten different regions of interest (ROIs) on the speckle pattern, while the uncertainty on $q$ was calculated using equation \eqref{q_uncertainty} with $\Delta n = 0.0005$  and $\Delta \theta = 1 ^\circ$. The resulting uncertainty on the diffusion coefficient $D$ and the particle radius $a$ were then propagated using equations \eqref{disp_uncertainty} and \eqref{stokes_einstein_uncertainty}, respectively.
+
+
+According to the literature \cite{atkins2010physical}, physical chemistry principles 
+are fundamental to understanding mixture properties.
+
+The code used in this project is available on GitHub \cite{mycode}.

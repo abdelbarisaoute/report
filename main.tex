@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage[numbers]{natbib}
+\bibpunct{(}{)}{;}{n}{}{,} % Use (1) format
+\bibliographystyle{unsrt}
+
+\usepackage[normalem]{ulem} % Underlining
+\usepackage{etoolbox}       % Patching commands
+\usepackage{booktabs}
+\makeatletter
+\pretocmd{\@citex}{\bgroup\uline\bgroup\textnormal}{}{}
+\apptocmd{\@citex}{\egroup\egroup}{}{}
+\makeatother
+\usepackage{subcaption}
+
+
+\usepackage{siunitx}
+
+\usepackage{gensymb}       % For \degree
+\usepackage{array}         % For column width control
+\renewcommand{\arraystretch}{1.4}
+\usepackage{float}
+
+\usepackage[numbib]{tocbibind}
+\usepackage{subcaption}  % Add to preamble
+
+% Math and symbols
+\usepackage{amsmath,amsthm,amssymb,amsfonts,physics}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{color}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,angles,quotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage[numbers]{natbib}
+\bibliographystyle{unsrt}
+
+% Shortcuts
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+
+\usepackage{cprotect}
+\usepackage{pdfpages}
+\usepackage{indentfirst}
+\usepackage{tocloft}
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+
+% Page Title Information
+\title{Titre}
+\author{Prénom Nom}
+\newcommand{\titre}{Devis de recherche}
+\newcommand{\auteurs}{Nom_de_Famille}
+\newcommand{\matricules}{Matricule_élève}
+\newcommand{\destinataire}{Prénom_NomProfesseur}
+\newcommand{\cours}{POL-1234}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear header and footer
+
+% Redefine \sectionmark to store only section title (no number)
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+% Header: page number left, section title right (no number)
+\fancyhead[L]{\thepage}
+\fancyhead[R]{\nouppercase{\rightmark}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+
+\begin{document}
+
+\input{pagetitre}
+\tableofcontents
+\newpage
+
+% Content Sections
+\input{_1.1Introduction.tex}
+\newpage
+
+
+\newpage
+\input{disp_proto.tex}
+\newpage
+
+\newpage
+\input{resultats.tex}
+\newpage
+
+\newpage
+\input{Analyse et discussion.tex}
+\newpage
+
+
+\newpage
+\input{conclusion.tex}
+\newpage
+\input{_1.6Contribution.tex}
+\newpage
+
+
+
+
+
+% Bibliography Section
+{
+\renewcommand{\bibname}{\LARGE\bfseries Bibliography}
+\vspace{1em}
+\begin{spacing}{0.9}
+\footnotesize
+\bibliography{mathbib}
+\end{spacing}
+\vspace{1em}
+}
+
+
+
+
+
+\end{document}

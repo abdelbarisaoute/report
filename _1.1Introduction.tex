@@ -1,0 +1,74 @@
+\section{Introduction}
+
+\begin{equation}
+    D = \frac{1}{2q^2 \tau_c}
+    \label{disp_eq}
+\end{equation}
+
+\begin{equation}
+    \Delta D = \frac{1}{\tau_c q^2}\sqrt{\left(\frac{1}{2\tau_c}\Delta \tau_c\right)^2 + \left(\frac{2}{q}\Delta q\right)^2}
+    \label{disp_uncertainty}
+\end{equation}
+
+\begin{equation}
+    \Delta q = \frac{4\pi}{\lambda} \sqrt{\left(\sin\left(\frac{\theta}{2}\right) \Delta n\right)^2 + \left(\frac{n}{2}\cos\left(\frac{\theta}{2}\right) \Delta \theta\right)^2}
+    \label{q_uncertainty}
+\end{equation}
+
+\begin{equation}
+    D = \frac{k_b T}{6\pi \eta a} \quad \begin{cases}
+        T: & \text{the temperature} \\
+        \eta: & \text{the dynamic viscosity}\\
+        $a$:& \text{radius of the particle}
+    \end{cases}
+    \label{stokes_einstein}
+\end{equation}
+
+\begin{equation}
+    \Delta a = \frac{k_b}{6\pi\eta D}\sqrt{\Delta T^2 + \left(T \frac{\Delta \eta}{\eta}\right)^2 + \left(T \frac{\Delta D}{D}\right)^2}
+    \label{stokes_einstein_uncertainty}
+\end{equation}
+
+\begin{equation}
+    Ra = \frac{g \beta (T_H -T_L)L^3}{\nu\alpha} \quad 
+    \begin{cases}
+        \beta:& \text{the thermal expansion coefficient}\\
+        \nu : & \text{kinematic viscosity}\\
+        \alpha :& \text{thermal diffusivity}\\
+        L : & \text{the depth of the liquid}
+    \end{cases}
+    \label{rayleigh_number}
+\end{equation}
+
+\begin{equation}
+    \beta = -\frac{1}{\rho} \left( \pdv{\rho}{T} \right)_p \approx -\frac{1}{\rho_{avg}} \frac{\rho_H - \rho_L}{T_H - T_L}
+    \label{thermal_expansion}
+\end{equation}
+
+\begin{equation}
+    \alpha = \frac{k}{\rho c_p} \quad
+    \begin{cases}
+        k :& \text{thermal conductivity}\\
+        \rho :& \text{density}\\
+        c:& \text{specific heat capacity at constant pressure}
+    \end{cases}
+    \label{thermal_diffusivity}
+\end{equation}
+\begin{equation}
+    \nu = \frac{\eta}{\rho} \quad
+    \begin{cases}
+        \eta:& \text{dynamic viscosity}\\
+        \rho:& \text{density}
+    \end{cases}
+    \label{kinematic_viscosity}
+\end{equation}
+
+\begin{equation}
+    Ra_{L,c} \approx 1700 \quad \text{the critical Rayleigh number}
+    \label{rayleigh_number_critic}
+\end{equation}
+
+\begin{equation}
+    Ra = \beta \frac{c_p\rho^2 g (T_H-T_L) L^3}{k\eta} \approx - \frac{c_p \rho_{avg} g L^3(\rho_H-\rho_L)}{k\eta}
+    \label{rayleigh_number_final}
+\end{equation}
